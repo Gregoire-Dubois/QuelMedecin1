@@ -1,10 +1,10 @@
-package fr.eni.quelMedecin;
+package fr.eni.ecole.quelMedecin.bo;
 
 public class MedecinGeneraliste {
-    private String nom="";
+    private String nom = "";
     private String prenom = "";
-    private String tel= "";
-    private int tarif= 25;
+    private String tel = "";
+    private int tarif = 25;
 
     public MedecinGeneraliste(String nom, String prenom, String tel, int tarif) {
         this.nom = nom;
@@ -39,17 +39,17 @@ public class MedecinGeneraliste {
 
     /**
      * L'affichage en console resemblera à :
-     *
+     * <p>
      * _________________________ Médecin____________________________
      * Nom Prénom
      * Téléphone
      * prix de la consultation
      */
 
-    public void afficher(){
+    public void afficher() {
         System.out.println("_________________________ Médecin____________________________");
 
-        System.out.println(this.nom +" " +  this.prenom +"\n" + this.tel+"\n" + this.tarif + " euros");
+        System.out.println(this.nom + " " + this.prenom + "\n" + this.tel + "\n" + this.tarif + " euros");
 
     }
 }

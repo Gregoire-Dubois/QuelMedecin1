@@ -1,9 +1,10 @@
 package fr.eni.ecole.quelMedecin.test;
-import fr.eni.quelMedecin.MedecinGeneraliste;
+
+import fr.eni.ecole.quelMedecin.bo.MedecinGeneraliste;
 
 public class TestMedecin {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         MedecinGeneraliste doc = new MedecinGeneraliste("Dubois", "Grégoire", "06060...", 30);
 

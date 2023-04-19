@@ -1,4 +1,4 @@
-package fr.eni.quelMedecin;
+package fr.eni.ecole.quelMedecin.bo;
 
 import java.time.LocalDate;
 
