@@ -1,14 +1,11 @@
 package fr.eni.quelMedecin;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Date;
 
 public class Patient {
 
-    private String nom="";
-    private String prenom= "";
+    private String nom = "";
+    private String prenom = "";
     private String numeroDeTelephone = "";
     private char sexe = ' ';
     private long numSecu;
@@ -31,9 +28,11 @@ public class Patient {
      * Numéro de Sécurité sociale XXXXXXXXXXXXXXX
      */
 
-    public void afficher(){
+    public void afficher() {
 
-        System.out.print("Le patient : " + this.nom + "\n" + this.prenom + "\n" + this.sexe + "\n" + this.numeroDeTelephone + "\n" + this.numSecu + "\n" + this.dateNaissance.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)));
+        System.out.print("Le patient : " + this.nom + "\n" + this.prenom + "\n" + this.sexe + "\n"
+                + this.numeroDeTelephone + "\n" + this.numSecu + "\n"
+                + this.dateNaissance);
     }
 
 }
