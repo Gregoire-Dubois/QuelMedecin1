@@ -20,16 +20,29 @@ public class Adresse {
         this.ville = ville;
     }
 
+
     public Adresse(int numero, String complNumero, String rue, int cp, String ville) {
         this(null, numero, complNumero, rue, cp, ville);
+    }
 
+    @Override
+    public String toString() {
+        return "Adresse{" +
+                "mentionsComple='" + mentionsComple + '\'' +
+                ", numero=" + numero +
+                ", complNumero='" + complNumero + '\'' +
+                ", rue='" + rue + '\'' +
+                ", cp=" + cp +
+                ", ville='" + ville + '\'' +
+                '}';
     }
 
     public void afficher() {
 
         if (this.mentionsComple != null) {
             System.out.println(" l'adresse est : " + " " + this.numero + " "
-                    + this.rue + " " + this.complNumero + " " + this.mentionsComple + " " + this.cp + " " + this.ville);
+                    + this.rue + " " + this.complNumero + " " + this.mentionsComple + " " + this.cp + " " + this.ville + " ");
+
         } else {
             System.out.println(" l'adresse est : " + " " + this.numero + " " + this.rue + " " + this.complNumero +
                     " " + this.cp + " " + this.ville);

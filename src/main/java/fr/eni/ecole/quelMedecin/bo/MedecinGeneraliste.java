@@ -5,6 +5,16 @@ public class MedecinGeneraliste {
     private String prenom = "";
     private String tel = "";
     private int tarif = 25;
+    private Adresse adresse;
+
+    public MedecinGeneraliste(String nom, String prenom, String tel, int tarif, Adresse adresse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.tel = tel;
+        this.tarif = tarif;
+        this.adresse = adresse;
+
+    }
 
     public MedecinGeneraliste(String nom, String prenom, String tel, int tarif) {
         this.nom = nom;
@@ -49,7 +59,13 @@ public class MedecinGeneraliste {
     public void afficher() {
         System.out.println("_________________________ Médecin____________________________");
 
-        System.out.println(this.nom + " " + this.prenom + "\n" + this.tel + "\n" + this.tarif + " euros");
+        if (this.adresse == null){
+            System.out.println(this.nom + " " + this.prenom + "\n" + this.tel + "\n"
+                    + this.tarif + " euros" + "\n");
+        }else {
+            System.out.println(this.nom + " " + this.prenom + "\n" + this.tel + "\n"
+                    + this.tarif + " euros" + "\n" + this.adresse);
+        }
 
     }
 }
