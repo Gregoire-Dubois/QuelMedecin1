@@ -1,11 +1,14 @@
 package fr.eni.ecole.quelMedecin.bo;
 
 public class MedecinGeneraliste {
+    public static final int MAX_CRENAUX = 15;
     private String nom = "";
     private String prenom = "";
     private String tel = "";
     private int tarif = 25;
     private Adresse adresse;
+
+    private Crenau[] crenau = new Crenau[MAX_CRENAUX];
 
     public MedecinGeneraliste(String nom, String prenom, String tel, int tarif, Adresse adresse) {
         this.nom = nom;
@@ -67,5 +70,32 @@ public class MedecinGeneraliste {
                     + this.tarif + " euros" + "\n" + this.adresse);
         }
 
+        System.out.println("Créneaux : ");
+        for (int i = 0; i<this.crenau.length; i++){
+            if(this.crenau[i] != null){
+                this.crenau[i].afficher();
+            }
+        }
+
     }
+
+    void ajouterCreneau(Crenau creneauAAjouter){
+
+        if(this != creneauAAjouter.getMedecin()){
+            System.err.println("Cecréanu ne peut être associé à ce médecin car il est déjà associé à un autre");
+        }else {
+            int pos = 0;
+            while (pos< this.crenau.length && this.crenau[pos] != null){
+                pos++;
+                if(pos == this.crenau.length){
+                    System.err.println("Trop de crénaux sont affectés à ce médecin");
+                }else {
+                    this.crenau[pos] = creneauAAjouter;
+                }
+            }
+        }
+
+    }
+
+
 }
