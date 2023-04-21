@@ -28,13 +28,8 @@ public class TestRDV {
         System.out.println("__________________________ Rendez-Vous ___________________________");
         Adresse nio = new Adresse(19, null, "avenue Léo Lagrange", 79000, "Niort");
         Patient adhemar = new Patient("Pamamobe", "Adhémar", "0753428619", 'M', 192112192020142l, LocalDate.of(1992, 11, 21), nio);
-        RendezVous rdv = new RendezVous(c1, adhemar, LocalDate.of(2020, 5, 23));
+        RendezVous rdv = new RendezVous(c1, adhemar, LocalDate.of(2023, 5, 23));
         rdv.afficher();
-
-
     }
-
-
-
 
 }

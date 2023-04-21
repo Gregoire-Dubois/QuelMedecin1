@@ -7,7 +7,7 @@ import fr.eni.ecole.quelMedecin.bo.MedecinGeneraliste;
 import java.time.LocalTime;
 
 public class TestCreneau {
-//"Dubois", "Grégoire", "06060...", 30
+
     public static void main(String[] args) {
         System.out.println("__________________________ Créneaux ______________________________");
 
@@ -39,6 +39,4 @@ public class TestCreneau {
         new Crenau(LocalTime.of(16, 30), 30, melanie);
         melanie.afficher();
     }
-
-
 }
